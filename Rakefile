@@ -36,3 +36,13 @@ namespace :sass do
     system 'sass _sass/screen.scss:_site/stylesheets/screen.css'
   end
 end
+
+namespace :post do
+
+  desc 'Generate a new, properly formated post file'
+  task :draft, [:title] do |t, args|
+    title = args.title || 'draft'
+    filename = "#{Time.now.strftime('%Y-%m-%d')}-#{title}.markdown"
+    system "echo > _drafts/#{filename}"
+  end
+end
