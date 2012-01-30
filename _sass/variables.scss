@@ -1,1 +1,41 @@
+// Type styles
+$serif: 'Gentium Basic', serif;
+$sans-serif: 'Open Sans', sans-serif;
+$condensed: 'Open Sans Condensed', sans-serif;
+$large_font: 1.5em;
+$regular_font: 1em;
+$small_font: 0.8em;
 
+// Color Scheme
+$primary: #3c3635;
+$highlight: #aba49e;
+$grey: #515151;
+// $link: #4da30c;
+$link: #e14613;
+$selection: #4da30c;
+
+// Background Gradient
+$bgg_outer: #ebebeb;
+$bgg_inner: #ffffff;
+
+@mixin background-gradient {
+  background: $bgg_inner; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, $bgg_inner 25%, $bgg_outer 55%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(25%,$bgg_inner), color-stop(55%,$bgg_outer)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, $bgg_inner 25%,$bgg_outer 55%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, $bgg_inner 25%,$bgg_outer 55%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, $bgg_inner 25%,$bgg_outer 55%); /* IE10+ */
+  background: radial-gradient(center, ellipse cover, $bgg_inner 25%,$bgg_outer 55%); /* W3C */
+}
+
+@mixin selection-color {
+  ::selection {
+    background: $selection; /* Safari */
+    color: #fff;
+  }
+
+  ::-moz-selection {
+    background: $selection; /* Firefox */
+    color: #fff;
+  }
+}
