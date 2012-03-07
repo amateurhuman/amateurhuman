@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ page.title }} | amateurhuman.com</title>
-    <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300,300italic|Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <title>{{ page.title }}</title>
+    <script type="text/javascript" src="http://use.typekit.com/ffc2ezr.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen, projection" />
-
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
   </head>
   <body>
-    <div class="container span10">
+    <div class="container">
       {{ content }}
+      <div class="links">
+        <ul>
+          <li><a href="http://twitter.com/amateurhuman">Twitter</a></li>
+          <li><a href="mailto:me@amateurhuman.com">Email</a></li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

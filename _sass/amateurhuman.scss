@@ -1,55 +1,44 @@
 body {
+  background-color: $lgrey;
   font-family: $serif;
-  color: $primary;
-  @include background-gradient;
-  @include selection-color;
+  color: $dgrey;
+  @include selection-color($green);
 
   strong { font-weight: bold;  }
   em     { font-style: italic; }
 
-  a {
-    color: $link;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #fff;
-    background-color: $link;
-  }
-
-  h1 {
-    font-family: $serif;
-    font-size: $large_font;
-    font-weight: 700;
-    margin-top: 40px;
-  }
-
-  h2 {
-    font-family: $condensed;
-    font-weight: bold;
-    margin-top: 24px;
-    margin-bottom: 8px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 4px;
-  }
-
-  p {
-    line-height: 175%;
-    margin-bottom: 10px;
-  }
+  a { text-decoration: none; }
 
   .header {
-    margin-top: 20px;
+    margin-top: 60px;
+
+    h1 {
+      font-family: $slab;
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 5px;
+
+      @include link($blue);
+    }
+
+    h2 {
+      font-family: $sans-serif;
+      font-size: 1.5em;
+      font-weight: 700;
+      margin: 5px 0px;
+      line-height: 1.25em;
+
+      @include link($red);
+    }
 
     .nav {
       a {
-        color: $primary;
+        color: $red;
       }
 
       a:hover {
         color: #fff;
-        background-color: $primary;
+        background-color: $blue;
       }
     }
 
@@ -84,18 +73,47 @@ body {
     }
   }
 
-  .post {
-    .date {
-      text-transform: uppercase;
-      font-size: .7em;
+  .content {
+    a {
+      color: $link;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #fff;
+      background-color: $link;
+    }
+
+    h1 {
       font-family: $sans-serif;
+      font-size: $large_font;
+      font-weight: 700;
+      margin-top: 40px;
+    }
+
+    p {
+      line-height: 175%;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      line-height: 1.25em;
+      border-bottom: 1px solid #d2d2d2;
+      border-top: 1px solid #d2d2d2;
+    }
+
+    .post {
+      .date {
+        text-transform: uppercase;
+        font-size: .7em;
+        font-family: $sans-serif;
+      }
     }
   }
 
-  .footer {
-    margin-top: 72px;
-    margin-bottom: 48px;
-    border-top: 1px solid $primary;
-    padding-top: 16px;
-  }
+
 }

@@ -1,21 +1,26 @@
 // Type styles
-$serif: 'Gentium Basic', serif;
-$sans-serif: 'Open Sans', sans-serif;
-$condensed: 'Open Sans Condensed', sans-serif;
+$serif: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", serif;
+$sans-serif: "ff-meta-web-pro-1","ff-meta-web-pro-2", sans-serif;
+$condensed: "din-condensed-web-1","din-condensed-web-2", sans-serif;
+$slab: "adelle-1","adelle-2", sans-serif;
 $large_font: 1.5em;
 $regular_font: 1em;
 $small_font: 0.8em;
 
 // Color Scheme
-$primary: #3c3635;
-$highlight: #aba49e;
-$grey: #515151;
-// $link: #4da30c;
+$blue:   #005164;
+$red:    #e01f15;
+$yellow: #e2de11;
+$orange: #d5711c;
+$green:  #9fa822;
+$teal:   #4fa645;
+$lgrey:  #f2f2f2;
+$dgrey:  #35383a;
+
 $link: #e14613;
-$selection: #4da30c;
 
 // Background Gradient
-$bgg_outer: #ebebeb;
+$bgg_outer: $lgrey;
 $bgg_inner: #ffffff;
 
 @mixin background-gradient {
@@ -28,14 +33,23 @@ $bgg_inner: #ffffff;
   background: radial-gradient(center, ellipse cover, $bgg_inner 25%,$bgg_outer 55%); /* W3C */
 }
 
-@mixin selection-color {
+@mixin selection-color($color) {
   ::selection {
-    background: $selection; /* Safari */
+    background: $color; /* Safari */
     color: #fff;
   }
 
   ::-moz-selection {
-    background: $selection; /* Firefox */
+    background: $color; /* Firefox */
     color: #fff;
+  }
+}
+
+@mixin link($color) {
+  a { color: $color; }
+
+  a:hover {
+    color: #fff;
+    background-color: $color;
   }
 }
