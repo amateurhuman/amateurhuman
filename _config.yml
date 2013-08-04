@@ -1,2 +1,2 @@
-exclude: ["public/"]
+exclude: ["public/","Rakefile","Gemfile","Gemfile.lock","Guardfile","screen.scss"]
 destination: "public"
