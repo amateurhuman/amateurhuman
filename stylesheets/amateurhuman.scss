@@ -2,8 +2,50 @@
 # Imported stylesheets go in _sass/_<name>.scss
 ---
 
+@import 'font-stack';
+@import 'colors';
 @import 'normalize';
+@import 'mixins';
 
-h1 {
-  font-family: 'Playfair Display', serif;
+body {
+  background-color: #fff;
+  color: $black;
+  font-family: $serif;
+  font-size: $em;
+  line-height: 30px;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $serif;
+  }
+
+  .site {
+    max-width: 640px;
+    margin: 0 auto;
+
+    a {
+      text-decoration: none;
+      color: $black;
+      padding: 0px 2px;
+      @include underline($highlight);
+
+      &:hover {
+        @include underline($light-grey);
+      }
+    }
+
+    blockquote {
+      background-color: $light-grey;
+      border-left: .5em solid darken($light-grey, 30%);
+      font-family: $sans-serif;
+      padding: 1em 2em;
+      margin: 2em -2em;
+      margin-right: 0em;
+    }
+
+    img {
+      width: 640px + (2 * $em);
+      margin: 1em -2em;
+      margin-right: 0em;
+    }
+  }
 }
