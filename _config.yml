@@ -1,0 +1,2 @@
+exclude: [Gemfile, Gemfile.lock, LICENSE]
+permalink: /posts/:title/
