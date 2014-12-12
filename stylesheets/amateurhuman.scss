@@ -1,5 +1,9 @@
 ---
-# Imported stylesheets go in _sass/
+# Imported stylesheets go in _sass/_<name>.scss
 ---
 
-@import 'reset'
+@import 'normalize';
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
