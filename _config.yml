@@ -1,4 +1,0 @@
-exclude: [Gemfile, Gemfile.lock, LICENSE, Rakefile, bin]
-permalink: /posts/:title/
-markdown: rdiscount
-pygments: true
